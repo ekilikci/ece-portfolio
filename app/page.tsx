@@ -71,7 +71,7 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-7">
             Engineering reliable data systems from{" "}
             <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-fuchsia-300 bg-clip-text text-transparent">
-              real-world signals.
+              real-world experiences.
             </span>
           </h1>
 
