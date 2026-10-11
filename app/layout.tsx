@@ -1,71 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Ece Kilikci | Data Engineer",
-  description:
-    "Data Engineer specializing in data platforms, marketing data pipelines, and analytics. Building reliable data systems with Databricks, Spark, and Airflow.",
-
-  keywords: [
-    "Data Engineer",
-    "Databricks",
-    "Spark",
-    "Airflow",
-    "AWS",
-    "Data Platform",
-    "Analytics Engineering",
-  ],
-
-  authors: [{ name: "Ece Kilikci" }],
-
-  openGraph: {
-    title: "Ece Kilikci | Data Engineer",
-    description:
-      "Building reliable data systems and exploring data behind everyday things.",
-    url: "https://www.ecekilikci.com",
-    siteName: "Ece Kilikci Portfolio",
-    images: [
-      {
-        url: "/avatar.jpg",
-        width: 800,
-        height: 800,
-        alt: "Ece Kilikci",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Ece Kilikci | Data Engineer",
-    description: "Data Engineer building practical and reliable data systems.",
-    images: ["/avatar.jpg"],
-  },
+  metadataBase: new URL("https://www.ecekilikci.com"),
+  title: "Ece Kılıkçı | Data × Product × AI",
+  description: "Data engineer and technical project lead in Berlin. Building reliable data platforms, thoughtful products and applied AI experiments.",
+  authors: [{ name: "Ece Kılıkçı" }],
+  openGraph: {title:"Ece Kılıkçı | Data × Product × AI",description:"From complex data to something that matters. Explore my work in data architecture, product development and applied AI.",url:"https://www.ecekilikci.com",siteName:"Ece Kılıkçı Portfolio",images:[{url:"/avatar.jpg",alt:"Ece Kılıkçı"}],locale:"en_US",type:"website"},
+  twitter:{card:"summary_large_image",title:"Ece Kılıkçı | Data × Product × AI",description:"Reliable data systems. Thoughtful products. Applied AI.",images:["/avatar.jpg"]}
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
-    </html>
-  );
-}
+export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="en" data-theme="light" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{__html: `(function(){try{var t=localStorage.getItem('portfolio-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t}catch(e){}})();`}} /></head><body>{children}</body></html>}
