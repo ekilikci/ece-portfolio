@@ -1,0 +1,128 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Later, Nope. — product design reference</title><style>
+*{box-sizing:border-box}body{margin:0;padding:12px 8px 36px;font-family:Inter,system-ui,sans-serif;background:transparent}button{font:inherit;cursor:pointer}.viz-controls{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}.btn{padding:9px 12px;border:1px solid light-dark(#ccc3d3,#63546d);border-radius:20px;background:transparent;color:light-dark(#4a3558,#eee1f4);font-size:12px}.btn-primary{background:light-dark(#78578c,#d6b4eb);color:light-dark(#fff,#181020);border-color:transparent}button:focus-visible{outline:2px solid #9571b0;outline-offset:3px}p,h1,h2,h3{margin:0}
+</style><script>document.documentElement.style.colorScheme=new URLSearchParams(location.search).get('theme')==='dark'?'dark':'light';</script></head><body><div id="later-nope-type-rhythm">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=Inter:wght@400;500;600&display=swap');
+    #later-nope-type-rhythm { color:light-dark(#161615,#f5f2e8); }
+    #later-nope-type-rhythm .lnr-controls { margin-bottom:14px; }
+    #later-nope-type-rhythm .lnr-stage { display:grid; place-items:center; padding:16px 0 4px; }
+    #later-nope-type-rhythm .lnr-phone { width:min(100%,390px); min-height:716px; overflow:hidden; position:relative; border:8px solid light-dark(#161615,#dedbd1); border-radius:48px; background:light-dark(#f5f1e6,#171715); color:light-dark(#131311,#f5f1e6); box-shadow:0 28px 68px light-dark(#16161526,#00000070); }
+    #later-nope-type-rhythm .lnr-status { height:49px; padding:16px 22px 0; display:flex; justify-content:space-between; font:500 12px/1 Inter,system-ui,sans-serif; }
+    #later-nope-type-rhythm .lnr-view { min-height:651px; padding:35px 27px 28px; display:none; position:relative; }
+    #later-nope-type-rhythm .lnr-view.is-active { display:flex; flex-direction:column; }
+    #later-nope-type-rhythm .lnr-utility { font:600 11px/1.3 Inter,system-ui,sans-serif; letter-spacing:.17em; text-transform:uppercase; color:light-dark(#6c6a64,#aaa79f); }
+    #later-nope-type-rhythm .lnr-display { font-family:'Bricolage Grotesque',system-ui,sans-serif; font-weight:750; letter-spacing:-.065em; }
+    #later-nope-type-rhythm .lnr-body { font-family:Inter,system-ui,sans-serif; }
+    #later-nope-type-rhythm .lnr-brand { justify-content:center; }
+    #later-nope-type-rhythm .lnr-name { margin:auto 0; font-size:77px; line-height:.82; }
+    #later-nope-type-rhythm .lnr-name span { display:block; }
+    #later-nope-type-rhythm .lnr-name span:last-child { color:#2448ed; }
+    #later-nope-type-rhythm .lnr-brand-line { width:48px; height:7px; border-radius:10px; background:#baff2c; margin-bottom:23px; }
+    #later-nope-type-rhythm .lnr-tag { font-size:18px; line-height:1.35; max-width:255px; font-weight:500; }
+    #later-nope-type-rhythm .lnr-home-top { display:flex; justify-content:space-between; align-items:baseline; }
+    #later-nope-type-rhythm .lnr-home-top b { font:600 12px/1 Inter,system-ui,sans-serif; color:#2448ed; }
+    #later-nope-type-rhythm .lnr-count { font-size:104px; line-height:.86; margin-top:52px; color:#2448ed; }
+    #later-nope-type-rhythm .lnr-count small { font-size:.51em; }
+    #later-nope-type-rhythm .lnr-bars { display:grid; grid-template-columns:repeat(8,1fr); gap:7px; margin-top:32px; }
+    #later-nope-type-rhythm .lnr-bars i { display:block; height:9px; border-radius:10px; background:light-dark(#dbd9df,#3f3e3b); }
+    #later-nope-type-rhythm .lnr-bars i.done { background:#baff2c; box-shadow:0 0 0 1px light-dark(#a3df22,#baff2c); }
+    #later-nope-type-rhythm .lnr-bars i.next { background:light-dark(#dbd9df,#3f3e3b); }
+    #later-nope-type-rhythm .lnr-punch { margin-top:56px; font-size:43px; line-height:.95; max-width:295px; }
+    #later-nope-type-rhythm .lnr-punch .lnr-response { color:#2448ed; display:block; }
+    #later-nope-type-rhythm .lnr-facts { margin-top:21px; font-size:13px; color:light-dark(#77746d,#aaa79f); }
+    #later-nope-type-rhythm .lnr-next { margin-top:auto; border-top:1px solid light-dark(#c9c6bb,#474641); padding-top:17px; display:flex; justify-content:space-between; align-items:baseline; }
+    #later-nope-type-rhythm .lnr-next strong { font:600 21px/1 Inter,system-ui,sans-serif; }
+    #later-nope-type-rhythm .lnr-alarm { background:#2448ed; color:#f7f3e8; }
+    #later-nope-type-rhythm .lnr-alarm .lnr-utility { color:#dce2ff; }
+    #later-nope-type-rhythm .lnr-alarm-copy { margin:auto 0; font-size:64px; line-height:.84; }
+    #later-nope-type-rhythm .lnr-alarm-copy span { display:block; color:#baff2c; }
+    #later-nope-type-rhythm .lnr-alarm-note { font-size:14px; line-height:1.45; color:#e2e7ff; max-width:265px; margin-bottom:25px; }
+    #later-nope-type-rhythm .lnr-snooze { padding:17px 18px; border-radius:23px; display:flex; justify-content:space-between; align-items:center; background:linear-gradient(135deg,#ffffff2d,#ffffff12); border:1px solid #ffffff38; backdrop-filter:blur(16px); }
+    #later-nope-type-rhythm .lnr-snooze span { font:600 16px/1 Inter,system-ui,sans-serif; }
+    #later-nope-type-rhythm .lnr-snooze b { font:600 12px/1 Inter,system-ui,sans-serif; color:#baff2c; }
+    #later-nope-type-rhythm .lnr-success { justify-content:center; }
+    #later-nope-type-rhythm .lnr-success-rule { width:100%; height:9px; display:grid; grid-template-columns:repeat(8,1fr); gap:7px; margin:26px 0 auto; }
+    #later-nope-type-rhythm .lnr-success-rule i { background:light-dark(#dbd9df,#3f3e3b); border-radius:10px; }
+    #later-nope-type-rhythm .lnr-success-rule i:nth-child(-n+6) { background:#baff2c; }
+    #later-nope-type-rhythm .lnr-verified { margin:auto 0 25px; font-size:58px; line-height:.9; }
+    #later-nope-type-rhythm .lnr-verified span { display:block; color:#2448ed; }
+    #later-nope-type-rhythm .lnr-success-meta { font-size:13px; color:light-dark(#77746d,#aaa79f); }
+    #later-nope-type-rhythm .lnr-camera { background:#11110f; color:#f7f3e8; }
+    #later-nope-type-rhythm .lnr-camera .lnr-utility { color:#a8a69f; }
+    #later-nope-type-rhythm .lnr-camera-frame { margin:30px -27px 0; flex:1; background:linear-gradient(145deg,#4d4d4a,#1b1b19); display:flex; flex-direction:column; justify-content:flex-end; padding:28px 27px; }
+    #later-nope-type-rhythm .lnr-camera-copy { font-size:46px; line-height:.92; color:#f7f3e8; }
+    #later-nope-type-rhythm .lnr-camera-copy span { display:block; color:#baff2c; }
+    #later-nope-type-rhythm .lnr-privacy { font-size:12px; color:#b8b5ad; margin-top:15px; }
+    @media(max-width:420px) {
+      #later-nope-type-rhythm .lnr-phone { min-height:650px; border-radius:38px; }
+      #later-nope-type-rhythm .lnr-view { min-height:585px; padding:29px 22px 24px; }
+      #later-nope-type-rhythm .lnr-name { font-size:66px; }
+      #later-nope-type-rhythm .lnr-count { font-size:88px; margin-top:40px; }
+      #later-nope-type-rhythm .lnr-punch { font-size:37px; margin-top:43px; }
+      #later-nope-type-rhythm .lnr-alarm-copy { font-size:54px; }
+      #later-nope-type-rhythm .lnr-verified { font-size:49px; }
+      #later-nope-type-rhythm .lnr-camera-frame { margin-left:-22px; margin-right:-22px; padding:24px 22px; }
+      #later-nope-type-rhythm .lnr-camera-copy { font-size:40px; }
+    }
+  </style>
+  <div class="viz-controls lnr-controls" aria-label="Choose app moment">
+    <button type="button" class="btn btn-primary" data-show="brand" aria-pressed="true">Identity</button>
+    <button type="button" class="btn" data-show="home" aria-pressed="false">Home · 5/8</button>
+    <button type="button" class="btn" data-show="alarm" aria-pressed="false">Alarm</button>
+    <button type="button" class="btn" data-show="camera" aria-pressed="false">Proof</button>
+    <button type="button" class="btn" data-show="success" aria-pressed="false">Verified</button>
+  </div>
+  <div class="lnr-stage">
+    <section class="lnr-phone" aria-label="Later, Nope. typography-led mobile identity">
+      <div class="lnr-status"><span>9:41</span><span>● ●● 87%</span></div>
+      <div class="lnr-view lnr-brand is-active" data-view="brand">
+        <div class="lnr-utility">Proof-based hydration</div>
+        <div class="lnr-name lnr-display"><span>Later,</span><span>Nope.</span></div>
+        <div class="lnr-brand-line"></div>
+        <div class="lnr-tag lnr-body">Your reminder gives up.<br>We don’t.</div>
+      </div>
+      <div class="lnr-view" data-view="home">
+        <div class="lnr-home-top"><div class="lnr-utility">Today · Wednesday</div><b>Later, Nope.</b></div>
+        <div class="lnr-count lnr-display">5<small>/8</small></div>
+        <div class="lnr-bars" aria-label="5 of 8 verified"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="next"></i><i></i><i></i></div>
+        <div class="lnr-punch lnr-display">Three more.<span class="lnr-response">Nice try.</span></div>
+        <div class="lnr-facts lnr-body">5 verified · 0 missed</div>
+        <div class="lnr-next"><span class="lnr-utility">Next break</span><strong>14:20</strong></div>
+      </div>
+      <div class="lnr-view lnr-alarm" data-view="alarm">
+        <div class="lnr-utility">Hydration break · 6 of 8</div>
+        <div class="lnr-alarm-copy lnr-display">Drink.<span>Prove it.</span></div>
+        <div class="lnr-alarm-note lnr-body">You can snooze twice. We both know how “later” ends.</div>
+        <div class="lnr-snooze"><span>Snooze · 10 min</span><b>1 OF 2</b></div>
+      </div>
+      <div class="lnr-view lnr-camera" data-view="camera">
+        <div class="lnr-utility">On-device · nothing saved</div>
+        <div class="lnr-camera-frame">
+          <div class="lnr-camera-copy lnr-display">Found it.<span>Take a sip.</span></div>
+          <div class="lnr-privacy lnr-body">Camera frames never leave your phone.</div>
+        </div>
+      </div>
+      <div class="lnr-view lnr-success" data-view="success">
+        <div class="lnr-utility">Hydration break verified</div>
+        <div class="lnr-success-rule" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="lnr-verified lnr-display">Look at you.<span>Hydrated and everything.</span></div>
+        <div class="lnr-success-meta lnr-body">6 of 8 verified · That counts.</div>
+      </div>
+    </section>
+  </div>
+  <script>
+    (() => {
+      const root = document.getElementById('later-nope-type-rhythm');
+      const buttons = [...root.querySelectorAll('[data-show]')];
+      const views = [...root.querySelectorAll('[data-view]')];
+      buttons.forEach(button => button.addEventListener('click', () => {
+        buttons.forEach(item => {
+          const active = item === button;
+          item.classList.toggle('btn-primary', active);
+          item.setAttribute('aria-pressed', String(active));
+        });
+        views.forEach(view => view.classList.toggle('is-active', view.dataset.view === button.dataset.show));
+      }));
+      root.querySelector('[data-show=home]').click();
+    })();
+  </script></div></body></html>
